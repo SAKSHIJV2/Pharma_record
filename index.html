@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Pharma Supply Chain</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 md:py-8">
+
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/3456/3456420.png" alt="Logo" class="h-10 w-10">
+          <h1 class="text-2xl font-bold text-blue-600">Decentralized Pharma Chain</h1>
+        </div>
+        <!-- Navigation -->
+        <nav class="space-x-4">
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+          <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-50 to-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-blue-700 mb-4">Track & Trace Medicines Efficiently</h2>
+        <p class="text-lg text-gray-600 mb-6">A decentralized web-based solution for managing pharmacy product records—ensuring transparency, expiry alerts, and real-time availability.</p>
+        <a href="login.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">Get Started</a>
+      </div>
+    </section>
+  
+
+  <!-- Features -->
+  <section id="features" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="fade-in p-6 bg-white rounded-lg shadow-md">
+        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="Medicine" class="w-20 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Add Medicine</h3>
+        <p>Pharmacy retailers can easily input product details including manufacturing and expiry dates.</p>
+      </div>
+      <div class="fade-in p-6 bg-white rounded-lg shadow-md">
+        <img src="https://cdn-icons-png.flaticon.com/512/2798/2798007.png" alt="Search" class="w-20 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Search Product</h3>
+        <p>Users can search medicines by name and get their details instantly.</p>
+      </div>
+      <div class="fade-in p-6 bg-white rounded-lg shadow-md">
+        <img src="https://cdn-icons-png.flaticon.com/512/4380/4380609.png" alt="Alert" class="w-20 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Expiry Alerts</h3>
+        <p>System detects and alerts about expired medicines to prevent their usage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4">About Our Platform</h2>
+      <p class="text-lg text-gray-600">Our decentralized pharma supply chain platform ensures real-time tracking of medicine data, improved product recall, and transparency in the pharmaceutical system. Say goodbye to expired or fake drugs.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4">Contact Us</h2>
+      <p class="mb-2">📞 +91-9876543210</p>
+      <p class="mb-2">✉️ support@pharmachain.in</p>
+      <p>Pune, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-4 text-center">
+    <p>&copy; 2025 PharmaChain. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple scroll animation
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(el => observer.observe(el));
+    
+    
+  </script>
+</body>
+
+</html>
